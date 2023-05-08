@@ -1,0 +1,11 @@
+SELECT DISTINCT ?disease ?diseaseLabel ?drug ?drugLabel 
+WHERE
+{
+  VALUES ?toggle { true false }
+  ?disease wdt:P699 ?doid;
+           wdt:P2176 ?drug.
+  ?drug rdfs:label ?drugLabel.
+    FILTER(LANG(?drugLabel) = "en").
+  ?disease rdfs:label ?diseaseLabel.
+    FILTER(LANG(?diseaseLabel) = "en").
+}
