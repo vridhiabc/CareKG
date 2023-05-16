@@ -1,17 +1,13 @@
 # CareKG - A Medical Knowledge Graph
 
-* Building a Knowledge graph for biomedical Science on neo4j, from the data of Wikidata, by SPARQL querying.
+* Building a Knowledge Graph for Biomedical Science on Neo4j, from the data acquired through SPARQL using Wikidata Query Service.
 
 <h2 >
-<a> Installation </a> </h2>
+<a> Starting Neo4j </a> </h2>
 
-installation of Neo4j
 <pre>
 <code>
-wget http://neo4j.com/artifact.php?name=neo4j-community-3.5.12-unix.tar.gz
-tar -xf 'artifact.php?name=neo4j-community-3.5.12-unix.tar.gz'
-cd neo4j-community-3.5.12
-bin/neo4j start
+Download Neo4j using any Browser
 </code>
 </pre>
 
@@ -36,19 +32,10 @@ pip3 install neo4j
 </code>
 </pre>
 
-<h2>
-<a> download this package </a> </h2>
-<pre>
-<code>
-git clone https://github.com/gaoyuanliang/covid19_knowledge_graph.git
-cd covid19_knowledge_graph
-</code>
-</pre>
-
 <h2 >
 <a> data collection </a> </h2>
 
-collect the entities and relationships of drug-disease from wikibase by SPARQL queries at https://query.wikidata.org/
+Collect the Entities and Relationships between Drugs and Diseases from Wikidata Medicine by SPARQL queries at https://query.wikidata.org/
 <pre>
 <code>
 SELECT DISTINCT ?disease ?diseaseLabel ?drug ?drugLabel 
@@ -67,19 +54,21 @@ WHERE
 </pre>
 
 <h2>
-<a>building knowledge graph at neo4j </a> </h2>
-
-<h3 >
-<a>Starting the neo4j server </a> </h3>
-<pre>
-<code>
-neo4j-community-5.3.0\bin - neo4j console
-
-</code>
-</pre>
+<a>Visualizing the Knowledge Graph in the Neo4j Platform </a> </h2>
 
 <h3>
-<a>ingest the data into neo4j </a> </h3>
+<a>Start the Neo4j Server</a> 
+<pre>
+<code>
+In command prompt write the following:
+cd neo4j-community-3.5.12
+neo4j console
+</code>
+</pre>
+</h3>
+
+<h3>
+<a>Ingest the data into Neo4j </a> </h3>
 <pre>
 <code>
 python MedKG_knowledge_graph.py
@@ -88,7 +77,7 @@ python MedKG_knowledge_graph.py
 </pre>
 
 <h2>
-<a>Website for tabular visualization of entities </a> </h2>
+<a>Website for Tabular Visualization of Entities </a> </h2>
 <pre>
 <code>
 python MedKG_display.py
