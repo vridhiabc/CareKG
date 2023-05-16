@@ -57,7 +57,7 @@ WHERE
 <a>Visualizing the Knowledge Graph in the Neo4j Platform </a> </h2>
 
 <h3>
-<a>Start the Neo4j Server</a> 
+<a>Start the Neo4j Server</a> </h3>
 <pre>
 <code>
 In command prompt write the following:
@@ -65,7 +65,7 @@ cd neo4j-community-3.5.12
 neo4j console
 </code>
 </pre>
-</h3>
+
 
 <h3>
 <a>Ingest the data into Neo4j </a> </h3>
@@ -77,7 +77,7 @@ python MedKG_knowledge_graph.py
 </pre>
 
 <h2>
-<a>Website for Tabular Visualization of Entities </a> </h2>
+<a>Frontend for Tabular Visualization of Entities </a> </h2>
 <pre>
 <code>
 python MedKG_display.py
