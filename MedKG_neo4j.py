@@ -1,7 +1,3 @@
-#######jessica_neo4j.py#######
-'''
-https://neo4j.com/docs/cypher-manual/current/clauses/create/#create-create-a-node-with-a-label
-'''
 import re
 import os
 import time
@@ -99,5 +95,3 @@ def ingest_relation_json2neo4j(bolt_url,
 			print(e)
 			#print(neo4j_cmd)
 	return None
-
-#######jessica_neo4j.py#######
